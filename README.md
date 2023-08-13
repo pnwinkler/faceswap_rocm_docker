@@ -1,4 +1,4 @@
-This sets up faceswap in a docker image, with the ability to use the system's AMD GPU to train. It works on my system (Ubuntu with ROCm 5.6 installed, and AMD RX 6700 XT) as of 2023-08-12, but perhaps not yours.
+This sets up faceswap in a docker image, with the ability to use the system's AMD GPU to train. It works on my system (Ubuntu 22.04.3 with ROCm 5.6 installed, and AMD RX 6700 XT) as of 2023-08-12, but perhaps not yours.
 
 _Disclaimer: My understanding of Docker is poor, and I don't promise any support._
 
