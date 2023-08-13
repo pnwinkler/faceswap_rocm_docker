@@ -1,4 +1,4 @@
-# according to faceswap's setup.py, faceswap needs a ROCm version between 5.2 and 5.4. 
+# according to faceswap's setup.py, faceswap needs a ROCm version between 5.2 and 5.4.
 FROM rocm/tensorflow:rocm5.4.1-tf2.10-dev
 
 # not sure what this DEBIAN_FRONTEND does. I copied it from the Nvidia Dockerfile on the faceswap repo

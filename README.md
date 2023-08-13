@@ -6,7 +6,7 @@ _Disclaimer: My understanding of Docker is poor, and I don't promise any support
 1) have ROCm installed on the host machine
 2) clone this repo
 3) cd into the repo
-4) sudo docker build . -t 'rocm_fswap_tensorflow' 
+4) sudo docker build . -t 'rocm_fswap_tensorflow'
 5) xhost +local: && sudo docker run --rm -it --network=host --device=/dev/kfd --device=/dev/dri --group-add=video --ipc=host --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME/dockerx:/dockerx -e DISPLAY=${DISPLAY} rocm_fswap_tensorflow
 6) inside the docker image, run "python faceswap.py gui"
 
