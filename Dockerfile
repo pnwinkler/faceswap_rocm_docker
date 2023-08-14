@@ -22,6 +22,8 @@ RUN git clean -df
 
 # avoid a numpy version conflict. We could maybe also adjust the tensorflow in the requirements file, because I think (not sure) we have a compatible version already.
 RUN sed -i "s|numpy>=1.25.0|numpy>=1.22.0|g" ./requirements/_requirements_base.txt
+# the preview tool uses PIL.Image.ANTIALAS which was removed in 10.0.0
+RUN sed -i "s|pillow>=9.2.0|pillow>=9.2.0,<10.0.0|g" ./requirements/_requirements_base.txt
  
 RUN python -m pip install --upgrade pip
 RUN python -m pip --no-cache-dir install -r ./requirements/requirements_rocm.txt
