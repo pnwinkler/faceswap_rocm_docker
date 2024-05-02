@@ -1,0 +1,22 @@
+services:
+  faceswap:
+    build: .
+    network_mode: host
+    devices:
+      - /dev/kfd
+      - /dev/dri
+    group_add: 
+      - video
+    ipc: host
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp=unconfined
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /home/MY_NAME/dockerx/rocm/faceswap:/dockerx/rocm/faceswap
+    environment:
+      - DISPLAY=${DISPLAY}
+    stdin_open: true
+    tty: true
+    command: /bin/bash
